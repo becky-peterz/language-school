@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Enrollment Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="relative">
+        <!-- <div>
+            <nav>
+                <a href="index.html">Apply</a>
+                <a href="home.html">Home</a>
+             </nav>
+        </div> -->
+        <div class="top">
+            <div class="top-bar">
+                <div class="logo">  <a href="home.html">Imay School </a></div>
+                <nav>
+                    <a href="home.html">Home</a>
+                    <a href="home.html">Courses</a>
+                    <button class="enroll">
+                        <a href="index.html">Enroll Now</a>
+                    </button>
+                </nav>
+               </div>
+            <h1>LANGUAGE ENROLLMENT FORM</h1>
+        </div>
+        <div class="absolute">
+            <form action="" id="myForm">
+                <div><h2>Student Details</h2></div>
+                <div class="space">
+                    <label for="name">Student Name:</label>
+                    <input type="text" placeholder="Student name" id="name" class="field"/>
+                    <span id="aErr" style="color:red"></span>
+                </div>
+
+                <div class="space">
+                    <label for="age">Age:</label>
+                    <input type="number" placeholder="Age" id="age" class="field"/>
+                    <span id="bErr" style="color:red"></span>
+                </div>
+
+                <div id="guardianDetails" style="display: none;">
+                    <div class="space" id="guardian-info">
+                        <label for="gname">Guardian Name:</label>
+                        <input type="text" placeholder="Guardian's name" id="gname" class="field"/>
+                        <span id="cErr" style="color:red"></span>
+                    </div>
+                    <div class="space">
+                        <label for="gphone">Guardian Phone:</label>
+                        <input type="text" placeholder="Guardian phone number" id="gphone" class="field"/>
+                        <span id="dErr" style="color:red"></span>
+                    </div>
+                </div>
+
+                <div class="space">
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" placeholder="Enter phone number" id="phone" class="field"/>
+                    <span id="eErr" style="color:red"></span>
+                </div>
+
+                <div class="space">
+                    <label for="email">Email Address:</label>
+                    <input type="text" placeholder="Enter your email address" id="email" class="field"/>
+                    <span id="fErr" style="color:red"></span>
+                </div>
+
+                <div class="space">
+                    <label for="start_date">Start Date:</label>
+                    <input type="date" id="start_date" class="field"/>
+                    <span id="gErr" style="color:red"></span>
+                </div>
+
+                <div class="space">
+                    <label for="select">Language Course:</label>
+                    <select name="course" id="select" onchange="availableslots()">
+                        <option value="">Choose a language course</option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="French">French</option>
+                        <option value="Mandarin">Mandarin</option>
+                        <option value="Italian">Italian</option>
+                        <option value="German">German</option>
+                    </select>
+                    
+                    <span id="hErr" style="color:red"></span>
+                </div>
+
+                <div class="space">
+                    <label for="select1">Class Schedule:</label>
+                    <select name="schedule" id="select1">
+                        <option value="">Select a schedule</option>
+                        <option value="Weekdays">Weekdays</option>
+                        <option value="Weekends">Weekends</option>
+                        <option value="Evenings">Evenings</option>
+                    </select>
+                    <span id="iErr" style="color:red"></span>
+                </div>
+
+                <div id="slot">
+                    <label for="select2">Available Slots:</label>
+                    <select name="" id="select2"></select>
+                    <span id="answers"></span>
+                </div>
+
+                <!-- <div class="space">
+                </div>
+                <div>
+                    <h3 id="success"></h3>
+                </div> -->
+                <button type="submit" class="green">Submit Form</button>
+            </form>
+            <div id="myModal" class="modal">
+                <div class="modal-color">
+                   
+                    <div>
+                        <img src="Images/close.png" alt=""  class="close" onclick="closeModal()">
+                        <!-- <span class="close" onclick="closeModal()"></span> -->
+                    </div>
+                    <h2>Summary Details</h2>
+                    <p id="personal"></p>
+                    <p id="total-cost"></p>
+            
+                    <button class="btn-cost">Calculate Total Cost</button>
+                 <p id="totalCost">Total Cost: $0</p>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- <button type="submit" class="btn btn-open green">Submit Form</button>
+    <div class="modal hidden" id="todo-modal">
+        <button class="btn-close">⨉</button>
+        <h2>Summary Details</h2>
+        <p id="personal"></p>
+        <p id="total-cost"></p>
+
+        <button class="btn-cost">Calculate Total Cost</button>
+     <p id="totalCost">Total Cost: $0</p>
+    </div> -->
+    <!-- <div class="overlay hidden"></div> -->
+
+    <script src="script.js"></script>
+</body>
+</html>
